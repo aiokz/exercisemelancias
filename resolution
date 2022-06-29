@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+void main(){
+	
+	int qtt;
+	float med, p, ptt = 0, map = 0, mep = 0;
+	
+	printf("Qual o peso da melancia?\n");
+	scanf("%f", &p);
+	
+	do{
+	    if(p > map){
+	    map = p;
+	} else if(p < mep){
+	    mep = p;
+	}
+	    qtt++;
+	    ptt += p;
+	    
+	    printf("Qual o peso da melancia?\n");
+	    scanf("%f", &p);
+	}
+    while (p > 0);
+    med = (ptt / qtt);
+    printf("\nA quantidade total de melancias e: %d", qtt);
+    printf("\nO peso total de melancias e: %.2f", ptt);
+    printf("\nA media total de melancias e: %.2f", med);
+    printf("\nO meior peso lido e: %.2f", map);
+    printf("\nO menor peso lido e: %.2f",mep);
+}
